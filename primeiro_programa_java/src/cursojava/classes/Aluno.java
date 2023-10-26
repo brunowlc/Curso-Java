@@ -31,10 +31,13 @@ public class Aluno {
 		idade = idadePadrao;
 	}
 	
+	
+	/*===========================================================================*/
+	
+	
 	/* Metodos GETTERS e SETTERS */ 
 	/* GET é para resgatar ou obter o valor do atributo */
 	/* SET é para adicionar ou receber dados para os atributos */
-	
 	
 	
 	/* GET/SET - Nome */
@@ -46,6 +49,7 @@ public class Aluno {
 	}
 	
 	
+	
 	/* GET/SET - Idade */
 	public int getIdade() {
 		return idade;
@@ -53,6 +57,7 @@ public class Aluno {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
+	
 	
 	
 	/* GET/SET - dataNascimento */
@@ -64,6 +69,7 @@ public class Aluno {
 	}
 	
 	
+	
 	/* GET/SET - registroGeral */
 	public String getRegistroGeral() {
 		return registroGeral;
@@ -71,6 +77,7 @@ public class Aluno {
 	public void setRegistroGeral(String registroGeral) {
 		this.registroGeral = registroGeral;
 	}
+	
 	
 	
 	/* GET/SET - numeroCpf */
@@ -82,6 +89,7 @@ public class Aluno {
 	}
 	
 	
+	
 	/* GET/SET - nomeMae */
 	public String getNomeMae() {
 		return nomeMae;
@@ -89,6 +97,7 @@ public class Aluno {
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
 	}
+	
 	
 	
 	/* GET/SET - nomePai */
@@ -100,6 +109,7 @@ public class Aluno {
 	}
 	
 	
+	
 	/* GET/SET - dataMatricula */
 	public String getDataMatricula() {
 		return dataMatricula;
@@ -107,6 +117,7 @@ public class Aluno {
 	public void setDataMatricula(String dataMatricula) {
 		this.dataMatricula = dataMatricula;
 	}
+	
 	
 	
 	/* GET/SET - nomeEscola */
@@ -118,6 +129,7 @@ public class Aluno {
 	}
 	
 	
+	
 	/* GET/SET - serieMatriculado */
 	public String getSerieMatriculado() {
 		return serieMatriculado;
@@ -126,6 +138,7 @@ public class Aluno {
 		this.serieMatriculado = serieMatriculado;
 	}
 
+	
 	
 	/* GET/SET - nota1 */
 	public double getNota1() {
@@ -136,6 +149,7 @@ public class Aluno {
 	}
 
 	
+	
 	/* GET/SET - nota2 */
 	public double getNota2() {
 		return nota2;
@@ -144,6 +158,7 @@ public class Aluno {
 		this.nota2 = nota2;
 	}
 
+	
 	
 	/* GET/SET - nota3 */
 	public double getNota3() {
@@ -154,6 +169,7 @@ public class Aluno {
 	}
 
 	
+	
 	/* GET/SET - nota4 */
 	public double getNota4() {
 		return nota4;
@@ -162,9 +178,39 @@ public class Aluno {
 		this.nota4 = nota4;
 	}
 	
-	/***********************************/
+	
+	
+	/*==================================================================*/
+	
+	
 	/* Metodo get para calcular e retornar a media*/
 	public double getMediaAluno() {
 		return (nota1 + nota2 + nota3 + nota4)/4;
 	}
+	
+	
+	/*==================================================================*/
+	
+	
+	/* Metodo para identificar se o aluno esta aprovado*/
+	public String getAlunoAprovado() {
+		double media = this.getMediaAluno();
+		if(media >= 70) {
+			return "Aluno Aprovado";
+		}else {
+			return "Aluno Reprovado";
+		}
+	}
+	
+	/* Outra forma de fazer usando boolean */
+	public boolean getAlunoAprovado1() {
+		double media = this.getMediaAluno();
+		if(media >= 70) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	
 }

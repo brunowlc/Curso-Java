@@ -34,7 +34,10 @@ public class PrimeiraClasseJava {
 		System.out.println("Data de Nascimento: " + aluno1.getDataNascimento());
 		System.out.println("RG do aluno: " + aluno1.getRegistroGeral());
 		System.out.println("CPF do aluno: " + aluno1.getNumeroCpf());
-		System.out.println("Media do Aluno: " + aluno1.getMediaAluno() + "\n");
+		System.out.println("Media do Aluno: " + aluno1.getMediaAluno());
+		System.out.println("O aluno está " + aluno1.getAlunoAprovado());
+		System.out.println("(Metodo Boolean) resultado = " + aluno1.getAlunoAprovado1());
+		System.out.println("(Metodo Boolean + Operador ternario) resultado = " + (aluno1.getAlunoAprovado1() ? "Aprovado" : "Reprovado") + "\n");
 		
 		/*============================================================================*/
 		
