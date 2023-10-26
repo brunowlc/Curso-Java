@@ -32,6 +32,7 @@ public class PrimeiraClasseJava {
 		System.out.println("Nome do aluno: " + aluno1.getNome());
 		System.out.println("Idade: " + aluno1.getIdade() + " Anos");
 		System.out.println("Data de Nascimento: " + aluno1.getDataNascimento());
+		System.out.println("RG do aluno:" + aluno1.getRegistroGeral());
 		System.out.println("Media do Aluno: " + aluno1.getMediaAluno() + "\n");
 		
 		/*============================================================================*/
