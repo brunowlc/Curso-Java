@@ -8,13 +8,14 @@ public class PrimeiraClasseJava {
 	
 	public static void main(String[] args) {
 		
-		Aluno aluno0; /*objeto ainda nao existe na memoria*/
+		/*Aluno aluno0; /*objeto ainda nao existe na memoria*/
 		
 		/*new Aluno() é uma instancia (criação de objeto)*/
 		/*O aluno1,2,3... é uma referencia para o objeto aluno*/
 		
-		Aluno aluno1 = new Aluno(); /*Objeto criado*/
+		/*Aluno aluno1 = new Aluno(); /*Objeto criado*/
 		
+		/*
 		aluno1.setNome("João da Silva");
 		aluno1.setIdade(50);
 		aluno1.setDataNascimento("18/10/1987");
@@ -25,10 +26,10 @@ public class PrimeiraClasseJava {
 		aluno1.setDataMatricula("10/01/2019");
 		aluno1.setNomeEscola("Santos Dumont");
 		aluno1.setSerieMatriculado("5");
-		aluno1.setNota1(90);
-		aluno1.setNota2(80.8);
-		aluno1.setNota3(70.9);
-		aluno1.setNota4(90.7);
+		aluno1.getDisciplina().setNota1(90);
+		aluno1.getDisciplina().setNota2(80.8);
+		aluno1.getDisciplina().setNota3(70.9);
+		aluno1.getDisciplina().setNota4(90.7);
 		
 		
 		System.out.println("Nome do aluno: " + aluno1.getNome());
@@ -40,6 +41,8 @@ public class PrimeiraClasseJava {
 		System.out.println("O aluno está " + aluno1.getAlunoAprovado());
 		System.out.println("(Metodo Boolean) resultado = " + aluno1.getAlunoAprovado1());
 		System.out.println("(Metodo Boolean + Operador ternario) resultado = " + (aluno1.getAlunoAprovado1() ? "Aprovado" : "Reprovado") + "\n");
+		
+		*/
 		
 		/*============================================================================*/
 		
@@ -57,10 +60,14 @@ public class PrimeiraClasseJava {
 		String dataMatricula = JOptionPane.showInputDialog("Informe a data da matricula do aluno");
 		String nomeEscola = JOptionPane.showInputDialog("Digite o nome da escola");
 		String serieMatriculado = JOptionPane.showInputDialog("Digite qual serie ele esta matriculado");
-		String nota1 = JOptionPane.showInputDialog("Digite a primeira nota do aluno");
-		String nota2 = JOptionPane.showInputDialog("Digite a segunda nota do aluno");
-		String nota3 = JOptionPane.showInputDialog("Digite a terceira nota do aluno");
-		String nota4 = JOptionPane.showInputDialog("Digite a quarta nota do aluno");
+		String disciplina1 = JOptionPane.showInputDialog("Informe a primeira disciplina");
+		String nota1 = JOptionPane.showInputDialog("Digite a nota do aluno");
+		String disciplina2 = JOptionPane.showInputDialog("Informe a segunda disciplina");
+		String nota2 = JOptionPane.showInputDialog("Digite a nota do aluno");
+		String disciplina3 = JOptionPane.showInputDialog("Informe a terceira disciplina");
+		String nota3 = JOptionPane.showInputDialog("Digite a nota do aluno");
+		String disciplina4 = JOptionPane.showInputDialog("Informe a quarta disciplina");
+		String nota4 = JOptionPane.showInputDialog("Digite a nota do aluno");
 		
 		aluno2.setNome(nome);
 		aluno2.setIdade(Integer.valueOf(idade)); /*Integer.valueOf() => converte String em inteiro*/
@@ -72,12 +79,16 @@ public class PrimeiraClasseJava {
 		aluno2.setDataMatricula(dataMatricula);
 		aluno2.setNomeEscola(nomeEscola);
 		aluno2.setSerieMatriculado(serieMatriculado);
-		aluno2.setNota1(Double.parseDouble(nota1));
-		aluno2.setNota2(Double.parseDouble(nota2));
-		aluno2.setNota3(Double.parseDouble(nota3));
-		aluno2.setNota4(Double.parseDouble(nota4));
+		aluno2.getDisciplina().setDisciplina1(disciplina1);
+		aluno2.getDisciplina().setNota1(Double.parseDouble(nota1));
+		aluno2.getDisciplina().setDisciplina1(disciplina2);
+		aluno2.getDisciplina().setNota2(Double.parseDouble(nota2));
+		aluno2.getDisciplina().setDisciplina1(disciplina3);
+		aluno2.getDisciplina().setNota3(Double.parseDouble(nota3));
+		aluno2.getDisciplina().setDisciplina1(disciplina4);
+		aluno2.getDisciplina().setNota4(Double.parseDouble(nota4));
 		
-		
+		/* 
 		System.out.println("Aluno: " + aluno2.getNome());
 		System.out.println("Idade: " + aluno2.getIdade() + " Anos");
 		System.out.println("Data de Nascimento: " + aluno2.getDataNascimento());
@@ -91,7 +102,15 @@ public class PrimeiraClasseJava {
 		System.out.println("Media do Aluno: " + aluno2.getMediaAluno());
 		System.out.println("O aluno está " + aluno2.getAlunoAprovado());
 		System.out.println("(Metodo Boolean) resultado = " + aluno2.getAlunoAprovado1());
+		System.out.println("(Metodo Boolean + Operador ternario) resultado = " + (aluno2.getAlunoAprovado1() ? "Aprovado" : "Reprovado") + "\n"); 
+		*/
+		
+		System.out.println(aluno2);
+		System.out.println("Media do Aluno: " + aluno2.getMediaAluno());
+		System.out.println("O aluno está " + aluno2.getAlunoAprovado());
+		System.out.println("(Metodo Boolean) resultado = " + aluno2.getAlunoAprovado1());
 		System.out.println("(Metodo Boolean + Operador ternario) resultado = " + (aluno2.getAlunoAprovado1() ? "Aprovado" : "Reprovado") + "\n");
+		
 		
 		
 		/*============================================================================*/

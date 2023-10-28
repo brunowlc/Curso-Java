@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.Objects;
+
 public class Aluno {
 	/*Atributos*/
 	private String nome;
@@ -12,10 +14,8 @@ public class Aluno {
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
-	private double nota1;
-	private double nota2;
-	private double nota3;
-	private double nota4;
+	
+	private Disciplina disciplina = new Disciplina();
 	
 	
 	public Aluno() { /* CRIA OS DADOS NA MEMORIA - SENDO PADRAO DO JAVA */
@@ -140,42 +140,12 @@ public class Aluno {
 
 	
 	
-	/* GET/SET - nota1 */
-	public double getNota1() {
-		return nota1;
+	/* GET/SET - Disciplina */
+	public Disciplina getDisciplina() {
+		return disciplina;
 	}
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
-	}
-
-	
-	
-	/* GET/SET - nota2 */
-	public double getNota2() {
-		return nota2;
-	}
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
-	}
-
-	
-	
-	/* GET/SET - nota3 */
-	public double getNota3() {
-		return nota3;
-	}
-	public void setNota3(double nota3) {
-		this.nota3 = nota3;
-	}
-
-	
-	
-	/* GET/SET - nota4 */
-	public double getNota4() {
-		return nota4;
-	}
-	public void setNota4(double nota4) {
-		this.nota4 = nota4;
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
 	}
 	
 	
@@ -185,7 +155,7 @@ public class Aluno {
 	
 	/* Metodo get para calcular e retornar a media*/
 	public double getMediaAluno() {
-		return (nota1 + nota2 + nota3 + nota4)/4;
+		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4())/4;
 	}
 	
 	
@@ -211,6 +181,44 @@ public class Aluno {
 			return false;
 		}
 	}
+
+	
+	
+	/*==================================================================*/
+	
+	/* toString */
+	
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", disciplina=" + disciplina + "]";
+	}
+
+	
+	
+	/*==================================================================*/
+	
+	/* Equals e Hashcode */
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome, numeroCpf);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(nome, other.nome) && Objects.equals(numeroCpf, other.numeroCpf);
+	}
+	
+	
 	
 	
 }
