@@ -45,7 +45,7 @@ public class Aluno {
 		return nome;
 	}
 	public void setNome(String nome){
-		this.nome = nome; /* THIS é utilizado para referenciar ao atributo nome da classe Aluno*/
+		this.nome = nome; /* THIS(esse, Este) é utilizado para referenciar o atributo nome da classe Aluno*/
 	}
 	
 	
