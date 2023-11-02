@@ -2,9 +2,11 @@ package cursojava.classes;
 
 import java.util.Objects;
 
+
+/* Essa classe Disciplina servira para todos os objetos e instancias de notas e materias */
 public class Disciplina {
 	
-	private String disciplina1;
+	/*private String disciplina1;
 	private double nota1;
 	private String disciplina2;
 	private double nota2;
@@ -13,9 +15,8 @@ public class Disciplina {
 	private String disciplina4;
 	private double nota4;
 	
-	
-
-	/* GET/SET - nota1 */
+/*	
+	/* GET/SET - nota1 
 	public double getNota1() {
 		return nota1;
 	}
@@ -25,7 +26,7 @@ public class Disciplina {
 
 	
 	
-	/* GET/SET - nota2 */
+	/* GET/SET - nota2 
 	public double getNota2() {
 		return nota2;
 	}
@@ -35,7 +36,7 @@ public class Disciplina {
 
 	
 	
-	/* GET/SET - nota3 */
+	/* GET/SET - nota3 
 	public double getNota3() {
 		return nota3;
 	}
@@ -45,7 +46,7 @@ public class Disciplina {
 
 	
 	
-	/* GET/SET - nota4 */
+	/* GET/SET - nota4 
 	public double getNota4() {
 		return nota4;
 	}
@@ -57,7 +58,7 @@ public class Disciplina {
 /* ==================================================================================== */	
 	
 	
-	/* GET/SET - Disciplina1 */
+	/* GET/SET - Disciplina1 
 	public String getDisciplina1() {
 		return disciplina1;
 	}
@@ -67,7 +68,7 @@ public class Disciplina {
 	
 	
 	
-	/* GET/SET - Disciplina2 */
+	/* GET/SET - Disciplina2 
 	public String getDisciplina2() {
 		return disciplina2;
 	}
@@ -77,7 +78,7 @@ public class Disciplina {
 	
 	
 	
-	/* GET/SET - Disciplina3 */
+	/* GET/SET - Disciplina3 
 	public String getDisciplina3() {
 		return disciplina3;
 	}
@@ -87,23 +88,49 @@ public class Disciplina {
 	
 	
 	
-	/* GET/SET - Disciplina4 */
+	/* GET/SET - Disciplina4 
 	public String getDisciplina4() {
 		return disciplina4;
 	}
 	public void setDisciplina4(String disciplina4) {
 		this.disciplina4 = disciplina4;
 	}
+	*/
+	
+	
+	
+	/* Melhorando o codigo usando listas */
+	
+	private String disciplina;
+	private double nota;
+	
+	
+	
+	/* GET/SET - Disciplina */
+	public String getDisciplina() {
+		return disciplina;
+	}
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
+	}
+	
+	/* GET/SET - Nota */
+	public double getNota() {
+		return nota;
+	}
+	public void setNota(double nota) {
+		this.nota = nota;
+	}
+	
 	
 	
 	
 /* ==================================================================================== */
 	
 	/* Equals e Hashcode*/
-	
 	@Override
 	public int hashCode() {
-		return Objects.hash(disciplina1, disciplina2, disciplina3, disciplina4, nota1, nota2, nota3, nota4);
+		return Objects.hash(disciplina, nota);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -114,26 +141,18 @@ public class Disciplina {
 		if (getClass() != obj.getClass())
 			return false;
 		Disciplina other = (Disciplina) obj;
-		return Objects.equals(disciplina1, other.disciplina1) && Objects.equals(disciplina2, other.disciplina2)
-				&& Objects.equals(disciplina3, other.disciplina3) && Objects.equals(disciplina4, other.disciplina4)
-				&& Double.doubleToLongBits(nota1) == Double.doubleToLongBits(other.nota1)
-				&& Double.doubleToLongBits(nota2) == Double.doubleToLongBits(other.nota2)
-				&& Double.doubleToLongBits(nota3) == Double.doubleToLongBits(other.nota3)
-				&& Double.doubleToLongBits(nota4) == Double.doubleToLongBits(other.nota4);
+		return Objects.equals(disciplina, other.disciplina)
+				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
 	}
-	
 	
 	
 /* ==================================================================================== */
-	
+		
 	/* toString */
 	@Override
 	public String toString() {
-		return "Disciplina [disciplina1=" + disciplina1 + ", nota1=" + nota1 + ", disciplina2=" + disciplina2
-				+ ", nota2=" + nota2 + ", disciplina3=" + disciplina3 + ", nota3=" + nota3 + ", disciplina4="
-				+ disciplina4 + ", nota4=" + nota4 + "]";
+		return "Disciplina [disciplina=" + disciplina + ", nota=" + nota + "]";
 	}
-	
 	
 	
 	
