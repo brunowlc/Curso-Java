@@ -72,8 +72,11 @@ public class PrimeiraClasseJava {
 		}
 		
 		for(Aluno aluno : alunos) {
-		
-			if (aluno.getNome().equalsIgnoreCase("alex")){ /* Se o aluno for equals(igual), IgnoreCase(iguinore se for letra maiuscula ou menuscula) faça:*/
+			 /* Se o aluno for equals(igual), IgnoreCase(iguinore se for letra maiuscula ou menuscula) faça:*/	
+			if (aluno.getNome().equalsIgnoreCase("alex")){
+				alunos.remove(aluno);/* Caso o aluno seja o alex, ele sera removido da lista*/
+				break;
+			}else {	
 				System.out.println(aluno);
 				System.out.println("Media do Aluno: " + aluno.getMediaAluno());
 				System.out.println("O aluno está " + aluno.getAlunoAprovado());
