@@ -160,7 +160,7 @@ public class Aluno {
 	/*==================================================================*/
 	
 	
-	/* Metodo get para calcular e retornar a media*/
+	/* Metodo get para calcular e retornar a media do aluno*/
 	public double getMediaAluno() {
 		
 		double somaNotas = 0.0;
