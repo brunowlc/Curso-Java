@@ -90,8 +90,8 @@ public class PrimeiraClasseJava {
 			}
 			
 			System.out.println("Aluno: " + aluno.getNome());
-			System.out.println("Média do aluno " + aluno.getMediaAluno());
-			System.out.println("resultado " + aluno.getAlunoAprovado());
+			System.out.println("Média do aluno: " + aluno.getMediaAluno());
+			System.out.println("resultado: " + aluno.getAlunoAprovado());
 			
 			for(int posicaod = 0; posicaod < aluno.getDisciplinas().size(); posicaod++) {
 				Disciplina disc = aluno.getDisciplinas().get(posicaod);

@@ -1,8 +1,11 @@
 package cursojava.classes;
 
+import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+
+import cursojava.constantes.StatusAluno;
 
 public class Aluno {
 	/*Atributos*/
@@ -180,16 +183,16 @@ public class Aluno {
 		double media = this.getMediaAluno();
 		if(media >= 50) {
 			if(media >= 70) {
-			return "Aluno Aprovado!";
+			return StatusAluno.APROVADO;
 			}else {
-				return "Aluno em recuperação!";
+				return StatusAluno.RECUPERACAO;
 			}
 		}else {
-			return "Aluno Reprovado!";
+			return StatusAluno.REPROVADO;
 		}
 	}
 	
-	/* Outra forma de fazer usando boolean */
+	/* Outra forma de fazer usando boolean 
 	public boolean getAlunoAprovado1() {
 		double media = this.getMediaAluno();
 		if(media >= 70) {
@@ -198,7 +201,7 @@ public class Aluno {
 			return false;
 		}
 	}
-
+	*/
 	
 	
 	/*==================================================================*/
